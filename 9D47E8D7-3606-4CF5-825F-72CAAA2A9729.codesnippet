@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@Request</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+#pragma mark --request
+- (void)requestFinished:(UMHttpRequest *)request action:(UMHttpRequestAction *)action {
+    int code = [[action.responseDictionary objectForKey:@"c"] intValue];
+    NSDictionary *dataDic = [action.responseDictionary objectForKey:@"d"];
+    NSString *errorInfo = [action.responseDictionary objectForKey:@"err"];
+    
+    if(0 == code) {
+        
+    } else {
+        [self showHint:errorInfo];
+    }
+}
+
+
+- (void)requestFailed:(UMHttpRequest *)request action:(UMHttpRequestAction *)action {
+    NSLog(@"%@", action.error);
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9D47E8D7-3606-4CF5-825F-72CAAA2A9729</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Request</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
