@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@ScrollViewPage</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)configScrollView {
+    self.scrollView = [UIScrollView new];
+    self.scrollView.backgroundColor = XY_Global_Background_Grey_Color;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.delegate = self;
+    self.scrollView.scrollsToTop = NO;
+    self.scrollView.contentSize = CGSizeMake(UIScreenWidth*2, UIScreenHeight-NavigationBarHeight-StatusBarHeight-kSegmentedControlHeight);
+    
+    [self.scrollView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
+    
+    [self.view addSubview:_scrollView];
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.top.equalTo(_segmentedControl.mas_bottom);
+        make.bottom.equalTo(self.view.mas_bottom);
+    }];
+}
+
+#pragma mark - scrollviewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGPoint point = scrollView.contentOffset;
+    NSInteger index = point.x/UIScreenWidth;
+    self.segmentedControl.selectedSegmentIndex = index;
+    
+    XYMyCardTableViewHandler *selectedTableViewHandler = _myCardTableViewHandlers[index];
+    [selectedTableViewHandler loadForDataIfNeed];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B9F75EF6-7B11-4665-89CD-922ECFF98DCE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ScrollViewPage</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
