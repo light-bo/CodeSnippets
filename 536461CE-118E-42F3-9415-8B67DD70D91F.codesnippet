@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@YYkb</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - YYKeyboardObserver
+- (void)keyboardChangedWithTransition:(YYTextKeyboardTransition)transition {
+    if ([_postContentTextView isFirstResponder]) {
+        [UIView animateWithDuration:transition.animationDuration animations:^{
+            CGRect kbFrame;
+            if (transition.toVisible) {
+                kbFrame = [[YYTextKeyboardManager defaultManager] convertRect:transition.toFrame toView:self.view];
+                CGRect fillOutBackgroundViewFrame = self.view.frame;
+                fillOutBackgroundViewFrame.origin.y = kbFrame.origin.y - fillOutBackgroundViewFrame.size.height;
+                self.view.frame = fillOutBackgroundViewFrame;
+            } else {
+                self.view.top = 0;
+            }
+        }];
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>536461CE-118E-42F3-9415-8B67DD70D91F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>YYKeyboard</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

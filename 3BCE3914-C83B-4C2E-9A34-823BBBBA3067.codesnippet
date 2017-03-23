@@ -3,24 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@SYYModelAlias</string>
+	<string>@ConfigSvs</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    static func modelCustomPropertyMapper() -&gt; NSDictionary {
-        return [
-            "nickName": "nickname",
-            "likeAmount": "like_num"
-        ]
-    }</string>
+	<string>- (void)configSubviews {
+    
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>9F26E50E-FEAC-4864-9AB6-CB303C638E71</string>
+	<string>3BCE3914-C83B-4C2E-9A34-823BBBBA3067</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>YYModelAliasSwift</string>
+	<string>ConfigSubviews</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
