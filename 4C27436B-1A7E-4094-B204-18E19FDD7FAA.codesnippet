@@ -14,6 +14,8 @@
     if (self) {
         
     }
+    
+    return self;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4C27436B-1A7E-4094-B204-18E19FDD7FAA</string>
