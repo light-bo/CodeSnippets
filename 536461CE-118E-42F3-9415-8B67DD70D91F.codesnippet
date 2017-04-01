@@ -20,6 +20,7 @@
                 fillOutBackgroundViewFrame.origin.y = kbFrame.origin.y - fillOutBackgroundViewFrame.size.height;
                 self.view.frame = fillOutBackgroundViewFrame;
             } else {
+                
                 self.view.top = 0;
             }
         }];
