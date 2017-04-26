@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@wHight</string>
+	<string>@lgf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.width.and.height.equalTo(@44);</string>
+	<string>NSLog(@"%s", __func__);</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F3418C46-25C9-4B01-AF8A-4ACDDBFBDBED</string>
+	<string>A544E8B1-11F9-4160-9226-4C45DD503A61</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MasWidthHeight</string>
+	<string>logFunc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
