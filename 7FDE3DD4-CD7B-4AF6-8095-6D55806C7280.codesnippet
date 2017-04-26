@@ -6,14 +6,14 @@
 	<string>@CP</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>ClassInterfaceVariables</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>@property (nonatomic, copy)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7FDE3DD4-CD7B-4AF6-8095-6D55806C7280</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>CopyProperty</string>
 	<key>IDECodeSnippetUserSnippet</key>
