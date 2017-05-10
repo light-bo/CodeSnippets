@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@iCONetwork</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSDictionary *paramsDic = @{
+        @"point": @"user.env",
+        @"sid": [UserInfoDataManager shareInstance].getUserSessionId? [UserInfoDataManager shareInstance].getUserSessionId: @"",
+        @"push_token": deviceToken? deviceToken: @""
+    };
+    
+    [[PdNetworkClient defaultNetworkClient] executeRequestWithUri:kReportDataPath method:PdHttpRequestTypePost parameters:paramsDic success:^(id responseObject) {
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+    } failure:^(PdNetworkErrorType errorType, NSString *errorMsg) {
+        if (failBlock) {
+            failBlock(errorType, errorMsg);
+        }
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8D6626CE-E243-4D05-BB1D-63C43E2AE016</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iCONetwork</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
