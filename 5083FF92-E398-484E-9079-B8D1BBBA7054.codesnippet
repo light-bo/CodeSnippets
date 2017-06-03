@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@ScrollView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    _mainScrollView = [UIScrollView new];
+    _mainScrollView.backgroundColor = Pd_App_Background_Color;
+    _mainScrollView.showsHorizontalScrollIndicator = NO;
+    _mainScrollView.pagingEnabled = YES;
+    _mainScrollView.delegate = self;
+    _mainScrollView.scrollsToTop = NO;
+    _mainScrollView.contentSize = CGSizeMake(Pd_Screen_width * 2, _pageHeight);
+    
+    [self.view addSubview:_mainScrollView];
+    [_mainScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.top.equalTo(_topBarView.mas_bottom);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-Pd_Tab_Bar_Height);
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5083FF92-E398-484E-9079-B8D1BBBA7054</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ScrollView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
