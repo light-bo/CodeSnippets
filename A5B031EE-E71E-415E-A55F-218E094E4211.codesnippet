@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@iCONetworkErrorInfo</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        if (PdNetworkErrorTypeSystem == errorType) {
+            [CustomHUD createShowContent:LANGUAGE(@"loopin_server_error") hiddenTime:3];
+        } else {
+            [CustomHUD createShowContent:errorMsg hiddenTime:3];
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A5B031EE-E71E-415E-A55F-218E094E4211</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iCONetworkErrorInfo</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
