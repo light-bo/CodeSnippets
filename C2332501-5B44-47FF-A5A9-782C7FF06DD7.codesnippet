@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@CreateCollectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    flowLayout.itemSize = CGSizeMake(Pd_Screen_width * 0.26, 116);
+    flowLayout.minimumLineSpacing = Pd_Screen_width * 0.04;
+    flowLayout.minimumInteritemSpacing = Pd_Screen_width * 0.04;
+    flowLayout.footerReferenceSize = CGSizeMake(Pd_Screen_width-40, 120);
+    
+    _gameListCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    _gameListCollectionView.backgroundColor = Pd_App_Background_Color;
+    _gameListCollectionView.delegate = self;
+    _gameListCollectionView.dataSource = self;
+    [_gameListCollectionView registerClass:[PdGameItemCollectionViewCell class] forCellWithReuseIdentifier:kGameItemCell];
+    
+    [self.view addSubview:_gameListCollectionView];
+    [_gameListCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_pageDescInfoLabel.mas_bottom).offset(30);
+        make.left.equalTo(self.view.mas_left).offset(20);
+        make.right.equalTo(self.view.mas_right).offset(-20);
+        make.bottom.equalTo(self.view.mas_bottom);
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C2332501-5B44-47FF-A5A9-782C7FF06DD7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CollectionViewInit</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
