@@ -3,22 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@WidthHeightRatio</string>
+	<string>@CreateTextView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.width.equalTo(_circleLogoImageView.mas_height).multipliedBy(16.0f/9.0f);</string>
+	<string>    _descInfoTextView = [UITextView new];
+    _descInfoTextView.font = [UIFont regularSystemFontOfSize:14];
+    _descInfoTextView.textColor = Pd_Title_Color;
+    [self addSubview:_descInfoTextView];
+    [_descInfoTextView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B260A2DB-6835-41B4-9CC9-ED95F26B50F0</string>
+	<string>C42946C5-560B-4021-93CB-CDD1946DC61C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MasonaryWidthHeightRatio</string>
+	<string>CreateTextView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
