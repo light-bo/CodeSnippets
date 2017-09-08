@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@CreateTextField</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    _accountTextField = [UITextField new];
+    _accountTextField.textColor = [UIColor whiteColor];
+    _accountTextField.font = [UIFont regularSystemFontOfSize:25];
+    _accountTextField.tintColor = [UIColor whiteColor];
+    _accountTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    NSString *accountPlaceHolder = LANGUAGE(@"edit_login_account_hint");
+    NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc] initWithString:accountPlaceHolder];
+    [placeholder addAttribute:NSForegroundColorAttributeName
+                        value:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.45]
+                        range:NSMakeRange(0, accountPlaceHolder.length)];
+    [placeholder addAttribute:NSFontAttributeName
+                        value:[UIFont regularSystemFontOfSize:25]
+                        range:NSMakeRange(0, placeholder.length)];
+    _accountTextField.attributedPlaceholder = placeholder;
+    [self.view addSubview:_accountTextField];
+    [_accountTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@305);
+        make.height.equalTo(@35);
+        make.left.equalTo(_titleLabel.mas_left);
+        make.top.equalTo(_titleLabel.mas_bottom).offset(35);
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E5B2910A-81C7-451F-9C4F-08707FA7D1BA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CreateTextField</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
