@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@rac</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  @weakify(self);
+    [[imagePostDetailViewController rac_valuesForKeyPath:@"isLike" observer:self] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        if (x) {
+            if (indexPath) {
+                infoModel.liked = [NSNumber numberWithInteger:1];
+                [self.mainCollectionView reloadItemsAtIndexPaths:@[indexPath]];
+            }
+        }
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3D939785-D99F-4664-96F5-CB91D47CF8CC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>rac</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
