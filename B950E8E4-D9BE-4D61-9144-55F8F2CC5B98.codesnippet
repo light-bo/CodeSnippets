@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@famlinkNetworkErrorInfo</string>
+	<string>@SystemAdaptive</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>if (PdNetworkErrorTypeSystem == errorType) {
-    [self.view makeToast:LANGUAGE(@"loopin_server_error")];
-} else {
-    [self.view makeToast:errorMsg];
-}</string>
+	<string>    if (@available(iOS 11.0, *)){
+        
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A5B031EE-E71E-415E-A55F-218E094E4211</string>
+	<string>B950E8E4-D9BE-4D61-9144-55F8F2CC5B98</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>famlinkNetworkErrorInfo</string>
+	<string>systemVersionAdaptive</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
