@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@IgnoreNoSelectorWarning</string>
+	<string>@Protocol</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-#pragma clang diagnostic pop</string>
+	<string>@protocol PdBaseViewControllerInteractionActions &lt;NSObject&gt;
+
+@end</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC95E052-A5F4-424F-A974-0C5CFE989B2B</string>
+	<string>EE31937C-4415-4BAA-9E3F-CB98A66EE1DD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>IgnoreNoSelectorWaining</string>
+	<string>Protocol</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
