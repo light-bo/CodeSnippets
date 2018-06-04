@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@YYLabel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>            __weak __typeof(self) wself = self;
+            YYLabel *label = [[YYLabel alloc] init];
+            NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:@"我的机器联网失败？"];
+            attrStr.font = [UIFont gw_systemFontOfSize:14 weight:UIFontWeightMedium];
+            attrStr.underlineStyle = NSUnderlineStyleSingle;
+            attrStr.underlineColor = UIColorFromHexValue(0x039AFF);
+            [attrStr setTextHighlightRange:attrStr.rangeOfAll
+                                     color:UIColorFromHexValue(0x039AFF)
+                           backgroundColor:[UIColor clearColor]
+                                 tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+                                     //...
+                                 }];
+            label.attributedText = attrStr;
+            label.textAlignment = NSTextAlignmentCenter;
+            [self.view addSubview:label];
+            _guildLabel = label;
+            [_guildLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(self.view.mas_centerX);
+                make.top.equalTo(_descInfoLabel.mas_bottom).offset(30);
+            }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>049CF4B7-2396-4926-8D44-7FF8539B1521</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>YYLabel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

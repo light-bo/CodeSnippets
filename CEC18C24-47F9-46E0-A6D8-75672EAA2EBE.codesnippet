@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@ChildViewController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    _mineVC = [GWMineViewController new];
+    [self addChildViewController:_mineVC];
+    _mineVC.view.frame = CGRectMake(0, 0, 0, 0);
+    [_pageScrollView addSubview:_mineVC.view];
+    [_mineVC didMoveToParentViewController:self];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CEC18C24-47F9-46E0-A6D8-75672EAA2EBE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ChildVC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
