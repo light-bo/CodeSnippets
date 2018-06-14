@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark --tableView
+	<string>#pragma mark - tableView
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
 }
@@ -37,12 +37,14 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
 }
-</string>
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>456BD2FC-4FC1-4C46-8C09-8904D3041A1A</string>
 	<key>IDECodeSnippetLanguage</key>
