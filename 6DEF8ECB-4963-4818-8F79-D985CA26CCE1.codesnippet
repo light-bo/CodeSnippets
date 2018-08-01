@@ -34,7 +34,7 @@ handler:^(UIAlertAction * action) {}];
 	<key>IDECodeSnippetIdentifier</key>
 	<string>6DEF8ECB-4963-4818-8F79-D985CA26CCE1</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>AlertController</string>
 	<key>IDECodeSnippetUserSnippet</key>
