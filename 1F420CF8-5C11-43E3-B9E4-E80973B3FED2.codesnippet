@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sWeakSelf</string>
+	<string>aulr</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self] _ in
-            guard let strongSelf = self else { return }</string>
+	<string> make.left.right.equalTo(scrollView)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6CAE7F9-E70E-47FF-A234-B78B35FD9576</string>
+	<string>1F420CF8-5C11-43E3-B9E4-E80973B3FED2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftWeakSelf</string>
+	<string>snp-left-right</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

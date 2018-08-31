@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sWeakSelf</string>
+	<string>auh</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self] _ in
-            guard let strongSelf = self else { return }</string>
+	<string>make.height.equalTo(footerInitHeight)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6CAE7F9-E70E-47FF-A234-B78B35FD9576</string>
+	<string>4B55E208-C4F2-49AB-ADCE-5EE145792C02</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftWeakSelf</string>
+	<string>snp-height</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

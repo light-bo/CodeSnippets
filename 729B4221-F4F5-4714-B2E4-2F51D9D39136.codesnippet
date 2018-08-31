@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sWeakSelf</string>
+	<string>aucy</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self] _ in
-            guard let strongSelf = self else { return }</string>
+	<string>make.centerY.equalTo(titleView)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6CAE7F9-E70E-47FF-A234-B78B35FD9576</string>
+	<string>729B4221-F4F5-4714-B2E4-2F51D9D39136</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftWeakSelf</string>
+	<string>snp-cy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
