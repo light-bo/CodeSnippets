@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.bottom.equalTo(self.view.snp.bottom)</string>
+	<string>make.bottom.equalToSuperview()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B86761FC-D5DA-4CFF-836F-094115134809</string>
 	<key>IDECodeSnippetLanguage</key>

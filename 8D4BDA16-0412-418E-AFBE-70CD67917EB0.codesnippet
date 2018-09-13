@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.left.equalTo(self.view.snp.left)</string>
+	<string>make.left.equalToSuperview()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>8D4BDA16-0412-418E-AFBE-70CD67917EB0</string>
 	<key>IDECodeSnippetLanguage</key>

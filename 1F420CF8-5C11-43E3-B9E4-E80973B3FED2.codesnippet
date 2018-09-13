@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string> make.left.right.equalTo(scrollView)</string>
+	<string> make.left.right.equalToSuperview()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>1F420CF8-5C11-43E3-B9E4-E80973B3FED2</string>
 	<key>IDECodeSnippetLanguage</key>
