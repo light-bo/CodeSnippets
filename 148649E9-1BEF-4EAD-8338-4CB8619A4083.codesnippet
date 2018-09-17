@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>aulr</string>
+	<string>aubLayoutGuild</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.left.right.equalToSuperview()</string>
+	<string>make.bottom.equalTo(bottomLayoutGuide.snp.top)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1F420CF8-5C11-43E3-B9E4-E80973B3FED2</string>
+	<string>148649E9-1BEF-4EAD-8338-4CB8619A4083</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-left-right</string>
+	<string>snp-bottom-layoutguild</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

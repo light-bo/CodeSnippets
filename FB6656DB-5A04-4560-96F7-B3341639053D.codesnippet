@@ -3,19 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>aulr</string>
+	<string>swiftCreateBtn</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.left.right.equalToSuperview()</string>
+	<string>   lazy var btn: UIButton = {
+        let btn = UIButton(frame: CGRect())
+        btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
+        btn.backgroundColor = UIColor.yellow
+        
+        return btn
+    } ()
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1F420CF8-5C11-43E3-B9E4-E80973B3FED2</string>
+	<string>FB6656DB-5A04-4560-96F7-B3341639053D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-left-right</string>
+	<string>swift-create-btn</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

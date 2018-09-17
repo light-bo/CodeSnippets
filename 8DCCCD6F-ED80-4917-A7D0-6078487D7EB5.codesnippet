@@ -3,19 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>aulr</string>
+	<string>swiftSetUpViews</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.left.right.equalToSuperview()</string>
+	<string>    func setUpViews() {
+        
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1F420CF8-5C11-43E3-B9E4-E80973B3FED2</string>
+	<string>8DCCCD6F-ED80-4917-A7D0-6078487D7EB5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-left-right</string>
+	<string>swift-setup-views</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swiftTableViewDelegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func numberOfSections(in tableView: UITableView) -&gt; Int {
+        return listData.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        let sectionArray = sectionArrayAt(section)
+        return sectionArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        let item = rowItemAt(indexPath)
+        return item.1 != nil ? item.1! : UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -&gt; CGFloat {
+        return 0.1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -&gt; CGFloat {
+        return 15.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor(fromHex: 0xf7f7f7)
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -&gt; UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor(fromHex: 0xf7f7f7)
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        let item = rowItemAt(indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: item.0)
+        
+        if let mineCell = cell as? YFListCellProtocol {
+            mineCell.refresh(item.2)
+        }
+        
+        if let lineCell = cell as? ROBaseLineCell {
+            configDividerLines(lineCell, indexPath)
+        }
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = rowItemAt(indexPath)
+        item.3?(indexPath)
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>71CEADD2-D745-442B-821A-704711722764</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift-tableview-delegate-datasource</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

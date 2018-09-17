@@ -3,19 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>aulr</string>
+	<string>swiftCreateTablebiew</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.left.right.equalToSuperview()</string>
+	<string>    lazy var mainTableView: UITableView = {
+        let tableView = UITableView(frame: CGRect(), style: .grouped)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 50
+        tableView.backgroundColor = UIColor.lightGray
+        tableView.separatorStyle = .none
+        
+        return tableView
+    } ()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1F420CF8-5C11-43E3-B9E4-E80973B3FED2</string>
+	<string>954C923D-D259-417F-8F42-0718D1D0F7C9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-left-right</string>
+	<string>swift-create-tableview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

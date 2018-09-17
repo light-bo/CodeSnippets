@@ -3,19 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>aulr</string>
+	<string>swiftCreateTextView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.left.right.equalToSuperview()</string>
+	<string>    lazy var infoTextView: UITextView = {
+        let textView = UITextView(frame: CGRect())
+        textView.font = UIFont.systemFont(ofSize: 15)
+        textView.textColor = UIColor.black
+
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        
+        return textView
+    } ()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1F420CF8-5C11-43E3-B9E4-E80973B3FED2</string>
+	<string>A6CAEE1D-FA51-40EB-B427-F8430B0230A2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-left-right</string>
+	<string>swift-create-textview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
