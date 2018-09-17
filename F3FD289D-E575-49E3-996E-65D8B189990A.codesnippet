@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>auedges</string>
+	<string>auFirstlineTop</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.edges.equalToSuperview().inset(UIEdgeInsetsMake(20, 15, 5, 15))</string>
+	<string>make.firstBaseline.equalToSuperview().offset(13+feeTitleLabel.font.pointSize)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>070C9D86-17AC-4EAC-B73A-1E7A5578DCEF</string>
+	<string>F3FD289D-E575-49E3-996E-65D8B189990A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-edges</string>
+	<string>snp-firstline-top</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
