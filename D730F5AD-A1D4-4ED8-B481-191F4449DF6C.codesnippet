@@ -3,22 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>aucy</string>
+	<string>swiftCreateImageView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.centerY.equalToSuperview()</string>
+	<string>    lazy var bkImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "")
+        
+        return image
+    } ()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>729B4221-F4F5-4714-B2E4-2F51D9D39136</string>
+	<string>D730F5AD-A1D4-4ED8-B481-191F4449DF6C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-cy</string>
+	<string>swift-create-imageview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

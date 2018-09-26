@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>aucy</string>
+	<string>aucx</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.centerY.equalToSuperview()</string>
+	<string>make.centerX.equalToSuperview()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>729B4221-F4F5-4714-B2E4-2F51D9D39136</string>
+	<string>8DC4C5C3-3E5F-48EC-AC65-B51EFACA0FBC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>snp-cy</string>
+	<string>snp-centerX</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
