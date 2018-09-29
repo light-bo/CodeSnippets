@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    var noDataView: YFNoContentView = {
+       let view = YFNoContentView()
+        view.imageView.image = UIImage(named: "abnormal_record_empty")
+        view.textLabel.text = "您当前暂无定投计划".local()
+        view.textLabel.font = UIFont.systemFont(ofSize: 14)
+        view.textLabel.textColor = UIColor(fromHex: 0x999999)
+        view.topMarginScale = 146.0 / 553.0
+        return view
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0228BB4A-33CA-4519-8CDA-094F1B7FD00F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

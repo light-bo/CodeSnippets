@@ -3,23 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sWeakSelf</string>
+	<string>yfNetworkError</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self] (scene) in
-guard let strongSelf = self else { return }</string>
+	<string>        ro_showNetworkFailedView({ [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.ro_hideNetworkFailedView(false)
+            strongSelf.requestForDDADetailListInfo()
+        }, animated: true)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6CAE7F9-E70E-47FF-A234-B78B35FD9576</string>
+	<string>7E0FD894-B719-4462-982D-68373ABF6257</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftWeakSelf</string>
+	<string>yf-network-error-view</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -3,23 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sWeakSelf</string>
+	<string>yfNoDataView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self] (scene) in
-guard let strongSelf = self else { return }</string>
+	<string>    var noDataView: YFNoContentView = {
+       let view = YFNoContentView()
+        view.imageView.image = UIImage(named: "abnormal_record_empty")
+        view.textLabel.text = "您当前暂无定投计划".local()
+        view.textLabel.font = UIFont.systemFont(ofSize: 14)
+        view.textLabel.textColor = UIColor(fromHex: 0x999999)
+        view.topMarginScale = 146.0 / 553.0
+        return view
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6CAE7F9-E70E-47FF-A234-B78B35FD9576</string>
+	<string>E77B1739-1F45-4F87-8DB0-054315B19B00</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftWeakSelf</string>
+	<string>yf-nodata-view</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -9,23 +9,31 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 基金 trailer fee 信息
-class YFTrailerFeeInfoModel: NSObject, ObjectJsonProtocol {
-    required init(json jsonDic: [AnyHashable : Any]?) {
-        let jsonModel = JSON(jsonDic ?? [:])
-        
-        productId = jsonModel["productid"].stringValue
-        trailerFee = jsonModel["trailerfee"].floatValue
-        trailerFeeDescription1 = jsonModel["trailerfeedescription1"].stringValue
-        trailerFeeDescription2 = jsonModel["trailerfeedescription2"].stringValue
+	<string>//DDA信息Model
+struct YFDDAInfoModel {
+    var id: String                       //DDA ID
+    var bankName: String                 //银行名称
+    var bankNum: String                  //完整银行卡号
+    var bankNumTail: String              //银行号码尾部
+    var status: YFAccountDDAStatus       //DDA状态
+    var documentURL: String?             //DDA协议文档下载地址, (部分接口无该字段)
+    
+    init(_ param: [String: Any]?) {
+        let unwrapedParam = param ?? [:]
+        let json = JSON(unwrapedParam)
+        self.init(json: json)
     }
     
-    var productId: String
-    var trailerFee: Float
-    var trailerFeeDescription1: String
-    var trailerFeeDescription2: String
-}
-</string>
+    init(json: JSON) {
+        id = json["id"].stringValue
+        bankName = json["bankname"].stringValue
+        bankNum = json["accountnumber"].stringValue
+        bankNumTail = json["accountnumberlast4digits"].stringValue
+        status = YFAccountDDAStatus(rawValue: json["status"].stringValue) ?? .requested
+        //TODO 字段确认
+        documentURL = json["documenturl"].string
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>20A7BD24-810A-4615-80DD-483655E2F964</string>
 	<key>IDECodeSnippetLanguage</key>
