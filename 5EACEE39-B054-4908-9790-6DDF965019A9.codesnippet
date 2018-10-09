@@ -3,26 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>yfNetworkError</string>
+	<string>SwiftAvailable</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        ro_showNetworkFailedView({ [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.ro_hideNetworkFailedView(false)
-            strongSelf.requestForDDADetailListInfo()
-        }, animated: true)</string>
+	<string>            if #available(iOS 11, *) {
+                make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            } else {
+                make.bottom.equalToSuperview()
+            }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7E0FD894-B719-4462-982D-68373ABF6257</string>
+	<string>5EACEE39-B054-4908-9790-6DDF965019A9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>yf-network-error-view</string>
+	<string>SwiftVersionAvailable</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
