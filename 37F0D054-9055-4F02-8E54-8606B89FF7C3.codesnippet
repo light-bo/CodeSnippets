@@ -15,8 +15,6 @@ class YFTradeTrailerFeeWholeInfoCell: ROBaseLineCell, YFListCellProtocol {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        showBottomLine = false
-        selectionStyle = .none
         setupSubViews()
     }
     
@@ -25,7 +23,8 @@ class YFTradeTrailerFeeWholeInfoCell: ROBaseLineCell, YFListCellProtocol {
     }
     
     func setupSubViews() {
-        
+        showBottomLine = false
+        selectionStyle = .none
     }
     
     func refresh(_ data: Any?) {
@@ -37,7 +36,7 @@ class YFTradeTrailerFeeWholeInfoCell: ROBaseLineCell, YFListCellProtocol {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>yf-taebleviewcell</string>
+	<string>yf-tableviewCell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

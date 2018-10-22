@@ -3,23 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>SwiftAvailable</string>
+	<string>yfEventHandlerGetVC</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>            if #available(iOS 11, *) {
-                make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-            } else {
-                make.bottom.equalToSuperview()
-            }</string>
+	<string>guard let vc = webView.jsController as? YFWKWebViewController else { return }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>5EACEE39-B054-4908-9790-6DDF965019A9</string>
+	<string>E8A8140F-44C6-4195-A73F-AC78049DD54B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftVersionAvailable</string>
+	<string>yf-eventhandler-get-vc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
