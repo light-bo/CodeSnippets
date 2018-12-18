@@ -3,13 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@yfBaseListVCSimple</string>
+	<string>@yfBaseListVC</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class YFAIPResultViewController: YFBaseListViewController {
+	<string>//TO DO: 国际化
+class YFAIPSimulatorRankViewController: YFBaseListViewController {
+    deinit {
+
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,26 +32,28 @@
     override func setupSubviews() {
         super.setupSubviews()
         
-        //...
+        self.title = "定投模拟器".local()
     }
     
     override func registerCells() -&gt; [(Any, String)] {
-        return []
+        return [
+            (YFAIPResultSuccessTableViewCell.self, kAIPResultSuccessTableViewCellId),
+        ]
     }
     
     override func makeDisplayItems() -&gt; [[YFCellItem]] {
-        return []
+        return [[YFCellItem("cellId", 34, nil, nil)]]
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>160B86A1-0D63-4A68-A657-59C3BF20A201</string>
+	<string>111FF3F6-684B-4FEF-A12B-5771C618B4EB</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>yf-base-list-vc-simple</string>
+	<string>yf-base-list-vc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
