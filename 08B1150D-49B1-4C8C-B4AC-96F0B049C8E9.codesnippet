@@ -3,23 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@swiftCreateView</string>
+	<string>@yfHandleLoadMore</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    lazy var vetivalLine: UIView = {
-        let view = UIView()
-        
-        return view
-    } ()</string>
+	<string>            let list = module.simulateFundRankListModel?.fundList ?? []
+            if list.isEmpty {
+                tableView.mj_footer.endRefreshingWithNoMoreData()
+            } else {
+                tableView.mj_footer.endRefreshing()
+            }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>397439C1-F439-4395-8BCF-20AD0AC843A6</string>
+	<string>08B1150D-49B1-4C8C-B4AC-96F0B049C8E9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>swift-create-view</string>
+	<string>yf-handle-load-more</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfAPIParamsModel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class YFSimulateFundRankRequestParams: NSObject {
+    override init() {
+        super.init()
+    }
+    
+    convenience init(_ start: Int, pageCount: Int, rankingKey: String) {
+        self.init()
+        
+        self.start = start
+        self.pageCount = pageCount
+        self.rankingKey = rankingKey
+    }
+    
+    @objc func getRequestParams() -&gt; [String : Any] {
+//        let allParams: [String : Any?] = ["assetclassid" : assetClassId,
+//                                          "subassetclassid" : subAssetClassId,
+//                                          "rankingkey" : rankingColumn?.rawValue,
+//                                          "sortdirection" : sortDirection?.rawValue,
+//                                          "start" : start,
+//                                          "count" : count,
+//                                          "defaultrankingkey" : defaultSortColumn?.rawValue]
+//        let availableParams: [String : Any] = allParams.filter { (key, value) in
+//            return value != nil
+//            }.mapValues { return $0! }
+//
+//
+//        let filtDic = makeFiltDic()
+//
+//        return availableParams.merging(filtDic) { (current, _) in current }
+        return [:]
+    }
+    
+    var start: Int?
+    var pageCount: Int?
+    var rankingKey: String?
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>20DD6031-0E01-45A8-B1C8-99449E0717A5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>yf-api-params-model</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

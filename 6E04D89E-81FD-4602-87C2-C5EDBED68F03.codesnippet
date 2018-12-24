@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@swiftCreateView</string>
+	<string>@swiftTopAutolayoutCompatible</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    lazy var vetivalLine: UIView = {
-        let view = UIView()
-        
-        return view
-    } ()</string>
+	<string>            if #available(iOS 11.0, *) {
+                make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            } else {
+                make.top.equalTo(self.topLayoutGuide.snp.bottom)
+            }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>397439C1-F439-4395-8BCF-20AD0AC843A6</string>
+	<string>6E04D89E-81FD-4602-87C2-C5EDBED68F03</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>swift-create-view</string>
+	<string>swift-top-autolayout-compatible</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

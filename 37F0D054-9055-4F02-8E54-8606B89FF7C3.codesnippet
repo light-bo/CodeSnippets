@@ -9,10 +9,14 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let kTradeTrailerFeeWholeInfoCellId = "YFTradeTrailerFeeWholeInfoCell"
+	<string>struct YFAIPSimulatorSegmentCellVM {
+    
+}
 
-class YFTradeTrailerFeeWholeInfoCell: ROBaseLineCell, YFListCellProtocol {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+class YFAIPSimulatorSegmentCell: ROBaseLineCell, YFListCellProtocol {
+    static var reuseIdentifier: String = "YFAIPSimulatorSegmentCell"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupSubViews()
@@ -28,7 +32,11 @@ class YFTradeTrailerFeeWholeInfoCell: ROBaseLineCell, YFListCellProtocol {
     }
     
     func refresh(_ data: Any?) {
-        
+        if let vm = data as? YFAIPSimulatorSegmentCellVM {
+            //TO DO: set up data
+        } else {
+            //暂时不支持其他类型
+        }
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

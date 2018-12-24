@@ -3,26 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@swiftCreateView</string>
+	<string>@yfCreateStackView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    lazy var vetivalLine: UIView = {
-        let view = UIView()
-        
+	<string>    var sliderContainer: YFStackView = {
+        let view = StackView.init(frame: .zero)
+        view.axis = .vertical
+        view.yf_alignment = .fill
+        view.yf_distribution = .fillEqually
+        view.spacing = 0
         return view
-    } ()</string>
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>397439C1-F439-4395-8BCF-20AD0AC843A6</string>
+	<string>ABBDDA4C-E94D-4A2F-BCFB-312E0579D370</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>swift-create-view</string>
+	<string>yf-create-stack-view</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

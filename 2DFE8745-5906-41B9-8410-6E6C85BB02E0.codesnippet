@@ -3,23 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@swiftCreateView</string>
+	<string>@yfCommentDoNothing</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    lazy var vetivalLine: UIView = {
-        let view = UIView()
-        
-        return view
-    } ()</string>
+	<string>/**do nothing*/</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>397439C1-F439-4395-8BCF-20AD0AC843A6</string>
+	<string>2DFE8745-5906-41B9-8410-6E6C85BB02E0</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>swift-create-view</string>
+	<string>yf-comment-do-noting</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

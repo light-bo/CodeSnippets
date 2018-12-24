@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfNumberAttributeString</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        let rateItem = fundInfoModel.profit.signedformatAmount()
+        if rateItem.0 == .undefine {
+            profitAttributeString = kCommonPlaceholder.attribute.textColor(UIColor.positiveOrange)
+        } else {
+            let color = rateItem.0 == .negative ? UIColor.negativeColor : UIColor.positiveOrange
+            profitAttributeString = rateItem.1.attribute.font(UIFont.mediumFont(18)).textColor(color).range(rateItem.0.prefix).font(UIFont.mediumFont(14)).textColor(color)
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>00271511-04F3-4F0C-A103-5B853DD9F176</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>yf-number-attribute-string</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

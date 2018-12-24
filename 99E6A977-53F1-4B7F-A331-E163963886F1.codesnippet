@@ -9,13 +9,18 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class YFAutoInvestAccountHeaderView: UIView {
+	<string>struct YFAIPSimulatorRankSegmentVM {
+    
+}
+
+class YFAIPSimulatorRankSegmentView: UIView {
     convenience init() {
         self.init(frame: .zero)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setupView()
     }
     
@@ -24,6 +29,11 @@
     }
     
     func setupView() {
+        self.backgroundColor = UIColor.white
+        
+    }
+    
+    func refreshUI(_ vm: YFAIPSimulatorRankSegmentVM) {
         
     }
 }</string>

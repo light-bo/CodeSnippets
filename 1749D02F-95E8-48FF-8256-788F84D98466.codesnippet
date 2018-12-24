@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfOCNetworkAPI</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>void (^success)(id jsonData) = ^(id jsonData) {
+    if (jsonData) {
+        [self handleResponseData:jsonData];
+        if (0 == self.ret.code) {
+            RLogInfo(@"simulate positive profit fund info response success.");
+            
+            self.simulatePositiveFundParamListModel = [[YFSimulatePositiveFundParamListModel alloc] init:self.data];
+            [self notifyObservers:@selector(requestAIPSimulatePositivesFundInfoDidReceive:)];
+        } else {
+            RLogError(@"simulate positive profit fund info request response unexpect. code = %ld, expect code = 0, errMsg = %@", (long)self.ret.code, self.ret.msg);
+            [self notifyObservers:@selector(requestAIPSimulatePositivesFundInfoDidFailed:)];
+        }
+    } else {
+        RLogError(@"simulate positive profit fund info request response empty");
+        [self notifyObservers:@selector(requestAIPSimulatePositivesFundInfoDidFailed:)];
+    }
+};
+
+void (^failure)(NSError *error) = ^(NSError *error){
+    RLogError(@"simulate positive profit fund info request failure. errCode = %ld, errMsg = %@", (long)error.code, error.localizedDescription);
+    
+    [self handleWithError:error];
+    [self notifyObservers:@selector(requestAIPSimulatePositivesFundInfoDidFailed:)];
+};
+
+NSString *path = [NSString stringWithFormat:@"%@/simulation/regularbuys/count", WM_SECURITY_SERVICE_PATH];
+NSString *URLString = [[ROWebserviceManager sharedManager] urlWithDomain:kDomainTypeWM servicePath:path];
+
+RLogInfo(@"Send simulate positive profit fund info request.");
+
+[_ROWM_REQUEST  GET:URLString parameters:nil encrypt:NO progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    success(responseObject);
+} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    failure(error);
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1749D02F-95E8-48FF-8256-788F84D98466</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>yf-oc-network-api</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
