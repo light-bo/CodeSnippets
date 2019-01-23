@@ -3,25 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>SwiftAvailable</string>
+	<string>@yfFundTagContainer</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>            if #available(iOS 11, *) {
-                make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-                make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-            } else  {
-                make.top.equalTo(topLayoutGuide.snp.bottom)
-                make.bottom.equalTo(bottomLayoutGuide.snp.top)
-            }</string>
+	<string>    lazy var tagContainer: YFTagView&lt;YFFundTagViewModel, YFFundTagView&gt; = {
+        let v = YFTagView&lt;YFFundTagViewModel, YFFundTagView&gt;()
+        v.backgroundColor = UIColor.clear
+        return v
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>5EACEE39-B054-4908-9790-6DDF965019A9</string>
+	<string>403F0D51-9DE3-4CDB-BFBA-487CE852BDE6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftVersionAvailable</string>
+	<string>yf-fund-tag-container</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

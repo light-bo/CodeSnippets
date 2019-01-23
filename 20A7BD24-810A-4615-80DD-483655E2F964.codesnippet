@@ -9,29 +9,19 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//DDA信息Model
-struct YFDDAInfoModel {
-    var id: String                       //DDA ID
-    var bankName: String                 //银行名称
-    var bankNum: String                  //完整银行卡号
-    var bankNumTail: String              //银行号码尾部
-    var status: YFAccountDDAStatus       //DDA状态
-    var documentURL: String?             //DDA协议文档下载地址, (部分接口无该字段)
+	<string>@objcMembers class YFHoldingProductPerfSummaryModel: NSObject {
+    var perfInfo: YFHoldingProductPerfInfoModel
+    var holdingProductAmount: Int //V2.3新增, 实际上在途基金会重复, 这里做了去重计算，返回实际基金数量
     
-    init(_ param: [String: Any]?) {
+    convenience init(_ param: [String: Any]?) {
         let unwrapedParam = param ?? [:]
         let json = JSON(unwrapedParam)
         self.init(json: json)
     }
     
     init(json: JSON) {
-        id = json["id"].stringValue
-        bankName = json["bankname"].stringValue
-        bankNum = json["accountnumber"].stringValue
-        bankNumTail = json["accountnumberlast4digits"].stringValue
-        status = YFAccountDDAStatus(rawValue: json["status"].stringValue) ?? .requested
-        //TODO 字段确认
-        documentURL = json["documenturl"].string
+        perfInfo = YFHoldingProductPerfInfoModel(json["performancesummary"].dictionaryObject)
+        holdingProductAmount = json["fundsnumber"].intValue
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
