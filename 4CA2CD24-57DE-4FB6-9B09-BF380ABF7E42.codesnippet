@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfBottomOperationViewModel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    lazy var moreOpportunityViewModel: YFBottomOperationViewModel = {
+        let buttonVM = YFBottomButtonViewModel("更多定投机会".local(), action: { [weak self] in
+            self?.onBottomBtnClick()
+            
+            //事件统计
+            YFAIPListAnalyze.Click.moreAIPChance.submit()
+        })
+        
+        let model = YFBottomOperationViewModel([buttonVM], isShadowHidden: false)
+        return model
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4CA2CD24-57DE-4FB6-9B09-BF380ABF7E42</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>yf-bottom-operation-view-model</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
