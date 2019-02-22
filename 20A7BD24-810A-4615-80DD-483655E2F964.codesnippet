@@ -9,19 +9,25 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@objcMembers class YFHoldingProductPerfSummaryModel: NSObject {
-    var perfInfo: YFHoldingProductPerfInfoModel
-    var holdingProductAmount: Int //V2.3新增, 实际上在途基金会重复, 这里做了去重计算，返回实际基金数量
+	<string>struct YFAIPCycleItemModel {
+    var id: String
+    var type: String            //类型：1，按月
+    var chargeDay: String       //扣款日期：10号，25号等
+    var nextChargeDate: String  //下一次扣款日期
+    var desc: String            //描述，如“每月10日”
     
-    convenience init(_ param: [String: Any]?) {
+    init(_ param: [String: Any]?) {
         let unwrapedParam = param ?? [:]
         let json = JSON(unwrapedParam)
         self.init(json: json)
     }
     
     init(json: JSON) {
-        perfInfo = YFHoldingProductPerfInfoModel(json["performancesummary"].dictionaryObject)
-        holdingProductAmount = json["fundsnumber"].intValue
+        id = json["id"].stringValue
+        type = json["type"].stringValue
+        chargeDay = json["chargeday"].stringValue
+        nextChargeDate = json["nextchargedate"].stringValue
+        desc = json["description"].stringValue
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
