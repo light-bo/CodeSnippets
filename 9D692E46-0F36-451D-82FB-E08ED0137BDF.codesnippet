@@ -3,27 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@yfNoDataView</string>
+	<string>@yfJumpFAQ</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    lazy var emptyView: YFNoContentView = {
-        let view = YFNoContentView()
-        view.imageView.image = UIImage(named: "Mine_noHoldings")
-        view.textLabel.text = "您当前没有购买基金产品".mineLocal
-        view.textLabel.font = UIFont.systemFont(ofSize: 14)
-        view.textLabel.textColor = UIColor(fromHex: 0x999999)
-        view.topMarginScale = 146.0 / 553.0
-        return view
-    }()</string>
+	<string>        let url = ROWebserviceManager.shared().getFAQUrl(.autoInvestSimulator) ?? ""
+        let web = YFWebViewController.webViewViewController(url)
+        YFApp.UI.pushViewController(fromRoot: web, animated: true)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8C96D7E3-F759-4480-AFB3-4EDF4F70C34B</string>
+	<string>9D692E46-0F36-451D-82FB-E08ED0137BDF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>yf-no-data-view</string>
+	<string>yf-jump-faq</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

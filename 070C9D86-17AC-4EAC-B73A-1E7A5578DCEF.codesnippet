@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>make.edges.equalToSuperview().inset(UIEdgeInsetsMake(20, 15, 5, 15))</string>
+	<string>make.edges.equalToSuperview().inset(UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15))</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>070C9D86-17AC-4EAC-B73A-1E7A5578DCEF</string>
 	<key>IDECodeSnippetLanguage</key>
