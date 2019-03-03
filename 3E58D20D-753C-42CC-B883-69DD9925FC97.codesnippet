@@ -3,19 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>cToDO</string>
+	<string>@yfAlertView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//TO DO: 国际化</string>
+	<string>        let alertController = ROAlertController.alert(withTitle: title, message: desc, cancelTitle: nil, okBtnTitle: "我知道了".cLocal) { (alert, _) in
+            alert.dismissWith(animated: true)
+        }
+        alertController.show(withAnimatied: true)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>17FE7158-2B88-450D-903C-3FF1B5AFAF4A</string>
+	<string>3E58D20D-753C-42CC-B883-69DD9925FC97</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>CommentToDO</string>
+	<string>yf-alertview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

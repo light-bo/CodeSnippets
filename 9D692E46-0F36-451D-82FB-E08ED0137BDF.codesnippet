@@ -3,19 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>cToDO</string>
+	<string>@yfJumpFAQ</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//TO DO: 国际化</string>
+	<string>        let url = ROWebserviceManager.shared().getFAQUrl(.autoInvestSimulator) ?? ""
+        let web = YFWebViewController.webViewViewController(url)
+        YFApp.UI.pushViewController(fromRoot: web, animated: true)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>17FE7158-2B88-450D-903C-3FF1B5AFAF4A</string>
+	<string>9D692E46-0F36-451D-82FB-E08ED0137BDF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>CommentToDO</string>
+	<string>yf-jump-faq</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,22 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>cToDO</string>
+	<string>@swiftAutoAdjustScrollviewInsets</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//TO DO: 国际化</string>
+	<string>        // automaticallyAdjustsScrollViewInsets iOS 11.0 废弃，用 contentInsetAdjustmentBehavior 代替
+        if #available(iOS 11.0, *) {
+            mainView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>17FE7158-2B88-450D-903C-3FF1B5AFAF4A</string>
+	<string>ADD89FC5-EE87-4453-BDB6-DFF9DFA793AC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>CommentToDO</string>
+	<string>swift-auto-adjust-srollview-insets</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

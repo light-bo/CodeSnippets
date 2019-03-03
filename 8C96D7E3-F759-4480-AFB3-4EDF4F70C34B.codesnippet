@@ -3,19 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>cToDO</string>
+	<string>@yfNoDataView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//TO DO: 国际化</string>
+	<string>    lazy var emptyView: YFNoContentView = {
+        let view = YFNoContentView()
+        view.imageView.image = UIImage(named: "Mine_noHoldings")
+        view.textLabel.text = "您当前没有购买基金产品".mineLocal
+        view.textLabel.font = UIFont.systemFont(ofSize: 14)
+        view.textLabel.textColor = UIColor(fromHex: 0x999999)
+        view.topMarginScale = 146.0 / 553.0
+        return view
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>17FE7158-2B88-450D-903C-3FF1B5AFAF4A</string>
+	<string>8C96D7E3-F759-4480-AFB3-4EDF4F70C34B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>CommentToDO</string>
+	<string>yf-no-data-view</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,19 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>cToDO</string>
+	<string>@yfBottomOperationViewModel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//TO DO: 国际化</string>
+	<string>    lazy var moreOpportunityViewModel: YFBottomOperationViewModel = {
+        let buttonVM = YFBottomButtonViewModel("更多定投机会".local(), action: { [weak self] in
+            self?.onBottomBtnClick()
+            
+            //事件统计
+            YFAIPListAnalyze.Click.moreAIPChance.submit()
+        })
+        
+        let model = YFBottomOperationViewModel([buttonVM], isShadowHidden: false)
+        return model
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>17FE7158-2B88-450D-903C-3FF1B5AFAF4A</string>
+	<string>4CA2CD24-57DE-4FB6-9B09-BF380ABF7E42</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>CommentToDO</string>
+	<string>yf-bottom-operation-view-model</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

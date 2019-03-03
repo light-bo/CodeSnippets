@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfSwiftModule</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@objc
+protocol YFRebalanceStatusObserver: class, NSObjectProtocol {
+    func requestRebalanceStatusDidReceive(module: YFRebalanceModule, observer: String)
+    func requestRebalanceStatusDidFailed(module: YFRebalanceModule, observer: String)
+}
+
+@objcMembers
+class YFRebalanceModule: ReOrientModule {
+    typealias RequeestSuccessBlock = (URLSessionTask?, Any?)  -&gt; ()
+    typealias RequeestFailedBlock = (URLSessionTask?, Error?) -&gt; ()
+    
+    struct BasePath {
+        static let wm = "wm/"
+        static let cmsConfig = "cms/wmapp/config/"
+        static let wmpTrade = "wm/trade/"
+        static let wmAccounts = "wm/accounts/"
+    }
+    
+    static let `default` = YFRebalanceModule()
+    
+    /// 用户最近调仓状态
+    func requestRebalanceStatus(_ observer: String) {
+        let path = BasePath.wmpTrade + "rebalance/status"
+        let URL = ROWebserviceManager.shared().url(with: .domainTypeWM, servicePath: path) ?? ""
+        
+        let successBlock: RequeestSuccessBlock = { _, resp in
+            
+            if let unwrapedResp = resp {
+                
+                self.handleResponseData(unwrapedResp)
+                if 0 == self.ret.code {
+                    
+                    RLog.info("request rebalance status info did success")
+                    
+                    self.rebalanceStatusInfoModel = YFRebalanceStatusInfoModel(self.data as? [String : Any])
+                    self.notifyObservers(#selector(YFRebalanceStatusObserver.requestRebalanceStatusDidReceive(module:observer:)), with: self, with: observer)
+                } else {
+                    
+                    RLog.error("request rebalance status info did failed, code: \(self.ret.code), msg: \(self.ret.msg ?? "null")")
+                    self.notifyObservers(#selector(YFRebalanceStatusObserver.requestRebalanceStatusDidFailed(module:observer:)), with: self, with: observer)
+                }
+                
+            } else {
+                RLog.error("request rebalance status info failed, resp empty")
+                self.notifyObservers(#selector(YFRebalanceStatusObserver.requestRebalanceStatusDidFailed(module:observer:)), with: self, with: observer)
+            }
+            
+        }
+        
+        let failedBlock: RequeestFailedBlock = { _, error in
+            self.handleWithError(error)
+            RLog.error("request rebalance status info did failed, code: \(self.ret.code), msg: \(self.ret.msg ?? "null")")
+            
+            self.notifyObservers(#selector(YFRebalanceStatusObserver.requestRebalanceStatusDidFailed(module:observer:)), with: self, with: observer)
+        }
+        
+        RLog.info("start request rebalance status info")
+        ROWMHttpClient.shared().get(URL, parameters: nil, encrypt: false, progress: nil, success: successBlock, failure: failedBlock)
+    }
+    
+    var rebalanceStatusInfoModel: YFRebalanceStatusInfoModel?
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AEFFD622-43BA-4BF8-AFD7-423C2831EC58</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>yf-swift-module</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

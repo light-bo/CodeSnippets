@@ -10,9 +10,11 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>            if #available(iOS 11, *) {
+                make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
                 make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-            } else {
-                make.bottom.equalToSuperview()
+            } else  {
+                make.top.equalTo(topLayoutGuide.snp.bottom)
+                make.bottom.equalTo(bottomLayoutGuide.snp.top)
             }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5EACEE39-B054-4908-9790-6DDF965019A9</string>
