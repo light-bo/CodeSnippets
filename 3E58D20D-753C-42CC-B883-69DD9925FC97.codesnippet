@@ -9,10 +9,17 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        let alertController = ROAlertController.alert(withTitle: title, message: desc, cancelTitle: nil, okBtnTitle: "我知道了".cLocal) { (alert, _) in
-            alert.dismissWith(animated: true)
-        }
-        alertController.show(withAnimatied: true)</string>
+	<string>            let alert = ROAlertController.alert(withTitle: errorInfoModel.errTitle, message: errorInfoModel.errMsg, cancelTitle: nil, okBtnTitle: nil, handler: { alertVC, index in
+                if index == 1 {
+                    //TO DO: 重新申请
+                }
+                alertVC.dismissWith(animated: true)
+            })
+            
+            alert.addBtn(withTitle: "取消".cLocal, with: ROAlertStyle.normalStyleWithCancelBtn())
+            alert.addBtn(withTitle: "重新申请".local(), with: ROAlertStyle.normalStyleWithOkBtn())
+            
+            alert.show(withAnimatied: true)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3E58D20D-753C-42CC-B883-69DD9925FC97</string>
 	<key>IDECodeSnippetLanguage</key>
