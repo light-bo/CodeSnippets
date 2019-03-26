@@ -3,24 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@swiftAutoAdjustScrollviewInsets</string>
+	<string>@swiftLabelHeight</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        // automaticallyAdjustsScrollViewInsets iOS 11.0 废弃，用 contentInsetAdjustmentBehavior 代替
-        if #available(iOS 11.0, *) {
-            mainView.contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }</string>
+	<string>       let boundSize = CGSize(width: UIScreen.main.bounds.size.width - 15 * 2, height: CGFloat.greatestFiniteMagnitude)
+        let textHeight =  title.sizeWithFont(font: self.textFont, boundSize: boundSize).height</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>ADD89FC5-EE87-4453-BDB6-DFF9DFA793AC</string>
+	<string>9FA4C295-86E9-4D4F-831B-32759CCE2DD7</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>swift-auto-adjust-srollview-insets</string>
+	<string>swift-label-height</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
