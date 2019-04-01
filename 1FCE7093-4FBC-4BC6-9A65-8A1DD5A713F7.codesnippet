@@ -3,22 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@yfAlertSimpleOk</string>
+	<string>@conditionCompile</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>           let alertController = ROAlertController.alert(withTitle: errorResult.errTitle, message: errorResult.errMsg, cancelTitle: nil, okBtnTitle: "我知道了".cLocal) { (alert, _) in
-                alert.dismissWith(animated: true)
-            }
-            alertController.show(withAnimatied: true)</string>
+	<string>#if 0
+#else
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D598E52D-AB48-4D09-8347-6626F4A5B158</string>
+	<string>1FCE7093-4FBC-4BC6-9A65-8A1DD5A713F7</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>yf-alert-simple-ok</string>
+	<string>condition-compile</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
