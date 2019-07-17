@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@swiftOptionSet</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>public struct LoginResponse : OptionSet {
+    public let rawValue : Int
+    public init(rawValue: Int){ self.rawValue = rawValue}
+    
+    static let userInfo = LoginResponse(rawValue: 1 &lt;&lt; 0 )
+    static let accountStatus = LoginResponse(rawValue: 1 &lt;&lt; 1 )
+    static let customer = LoginResponse(rawValue: 1 &lt;&lt; 2)
+    static let clients = LoginResponse(rawValue: 1 &lt;&lt; 3)
+    
+    static let requestFinish: LoginResponse = [.userInfo, .accountStatus, .customer, .clients]
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7DF7CE47-4465-494C-9CDE-28DB48599BDC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift-OptionSet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
