@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@StrongWeakSelf</string>
+	<string></string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__weak __typeof(self)wself = self;
-__strong __typeof(wself)strongSelf = wself;</string>
+	<string>
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6A3242A7-F836-494F-8AA8-C1C69F7706E2</string>
+	<string>989B7867-95E6-4BC2-A32A-FD2986EE188A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>StrongWeakSelf</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

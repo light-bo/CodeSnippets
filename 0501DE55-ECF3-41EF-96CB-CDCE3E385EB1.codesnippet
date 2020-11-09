@@ -3,22 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@StrongWeakSelf</string>
+	<string>@AddDelayImageView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__weak __typeof(self)wself = self;
-__strong __typeof(wself)strongSelf = wself;</string>
+	<string>- (UIImageView *)delayImg {
+    
+    if (!_delayImg) {
+        _delayImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_portfolio_delay"]];
+        _delayImg.hidden = YES;
+    }
+    return _delayImg;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6A3242A7-F836-494F-8AA8-C1C69F7706E2</string>
+	<string>0501DE55-ECF3-41EF-96CB-CDCE3E385EB1</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>StrongWeakSelf</string>
+	<string>@addDelayImageView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

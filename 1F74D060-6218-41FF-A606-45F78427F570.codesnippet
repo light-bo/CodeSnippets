@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@swiftThemeConfig</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        self.theme.config(type: YFSegmentContainer.self) { (v, t) in
+            guard let themeColor = t as? YYThemeColor else { return }
+            
+            v?.topBar.backgroundColor = themeColor.backgroundColor.colorBase1
+            v?.topBar.indicatorView.backgroundColor = themeColor.commonColor.brandColor
+            v?.topBar.bottomLineView.backgroundColor = themeColor.separatorColor.colorSeparator10
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1F74D060-6218-41FF-A606-45F78427F570</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swiftThemeConfig</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

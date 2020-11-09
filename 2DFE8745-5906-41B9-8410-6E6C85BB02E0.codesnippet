@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@yfCommentDoNothing</string>
+	<string>@ocCommentDoNothing</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -14,6 +14,8 @@
 	<string>2DFE8745-5906-41B9-8410-6E6C85BB02E0</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>yf-comment-do-noting</string>
 	<key>IDECodeSnippetUserSnippet</key>

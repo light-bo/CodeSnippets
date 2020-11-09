@@ -3,22 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@StrongWeakSelf</string>
+	<string>@ocCreateLabel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__weak __typeof(self)wself = self;
-__strong __typeof(wself)strongSelf = wself;</string>
+	<string>- (UILabel *)titleLabel {
+    if (!_titleLabel) {
+        _titleLabel = [UILabel new];
+        _titleLabel.textColor = RGBA(73,158,240,1);
+        _titleLabel.font = [UIFont systemFontOfSize:20];
+
+    }
+    return _titleLabel;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6A3242A7-F836-494F-8AA8-C1C69F7706E2</string>
+	<string>67AD9A70-A1FB-40FA-BBBD-2EA330B8F9C3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>StrongWeakSelf</string>
+	<string>ocCreateLabel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

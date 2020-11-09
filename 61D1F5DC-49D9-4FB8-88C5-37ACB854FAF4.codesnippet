@@ -3,22 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@StrongWeakSelf</string>
+	<string>@ocCreateProgressView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__weak __typeof(self)wself = self;
-__strong __typeof(wself)strongSelf = wself;</string>
+	<string>- (UIProgressView *)progressView {
+    if (!_progressView) {
+        _progressView = [UIProgressView new];
+        _progressView.trackTintColor = UIColorFromHexAndAlpha(0xffffff, 0.2);
+    }
+    
+    return _progressView;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6A3242A7-F836-494F-8AA8-C1C69F7706E2</string>
+	<string>61D1F5DC-49D9-4FB8-88C5-37ACB854FAF4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>StrongWeakSelf</string>
+	<string>ocCreateProgressView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

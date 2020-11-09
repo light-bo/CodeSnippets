@@ -3,22 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@StrongWeakSelf</string>
+	<string>@ocCreateImageView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__weak __typeof(self)wself = self;
-__strong __typeof(wself)strongSelf = wself;</string>
+	<string>- (UIImageView *)dangerousFlagImageView {
+    if (!_dangerousFlagImageView) {
+        _dangerousFlagImageView = [UIImageView new];
+        _dangerousFlagImageView.image = [UIImage imageNamed:@""];
+    }
+    
+    return _dangerousFlagImageView;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6A3242A7-F836-494F-8AA8-C1C69F7706E2</string>
+	<string>9C358BFE-0727-43F9-9202-8B8C60719D9D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>StrongWeakSelf</string>
+	<string>ocCreateImageView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
