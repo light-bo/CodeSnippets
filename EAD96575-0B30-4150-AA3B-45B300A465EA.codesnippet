@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@optionSet</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct YSAFundRootMergeDataSet: OptionSet {
+    let rawValue: Int
+
+    init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+    
+    static let profile = YSAFundRootMergeDataSet(rawValue: 1 &lt;&lt; 0)
+    static let customer = YSAFundRootMergeDataSet(rawValue: 1 &lt;&lt; 1)
+    static let clients = YSAFundRootMergeDataSet(rawValue: 1 &lt;&lt; 2)
+    static let openAccount = YSAFundRootMergeDataSet(rawValue: 1 &lt;&lt; 3)
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EAD96575-0B30-4150-AA3B-45B300A465EA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@optionSet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

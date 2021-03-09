@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfRequestInvoke</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        let param = YSATradePriceSpreadDataParam(type)
+        YSATradePriceSpreadDataRequest(param, .get).fire().response { [weak self] (req, resq) in
+            guard let strongSelf = self else { return }
+            
+            if let data = resq.data?.priceSpreads, resq.isSuccess() {
+                strongSelf.updateCache(type, priceSpreadData: data)
+            } else {
+                RLog.info("update price spread data failed, type: \(type)")
+                /**do nothing*/
+            }
+        }.cacheResponse({ [weak self] (_, cacheObj) in
+            guard let strongSelf = self else { return }
+            
+            if let data = cacheObj?.data?.priceSpreads {
+                strongSelf.updateCache(type, priceSpreadData: data)
+            } else {/* do nothing */}
+            
+        })</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C872B497-83F8-46AC-B81F-14805262C7F0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@yfRequestInvoke</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

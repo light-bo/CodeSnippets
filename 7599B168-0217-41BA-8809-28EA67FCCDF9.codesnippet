@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfProcessor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// VCM，CAS 部分
+class YSACasVcmProcessor: YYTableViewProcessor, YYTableDriverProtocol {
+    override func onViewDidLoad(_ viewController: UIViewController) {
+        refreshUI()
+    }
+    
+    open override func registerCells() {
+        tableVC?.tableView.register(YSATradeCasVcmCell.classForCoder(),
+                                    forCellReuseIdentifier: YSATradeCasVcmCell.reuseIdentifier())
+    }
+    
+    open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return shouldShowCasVcm ? 1 : 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        let list = getDisplayList()
+        
+        guard let listItem = list[safe: indexPath.row] else { return CommonBaseListCell() }
+        
+        let cell = listItem.0
+        let vm = listItem.1
+        
+        cell.refresh(vm)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        return 44
+    }
+    
+    func makeDisplayItems() {
+        var list: [YYCellItem] = [YYCellItem]()
+        
+        let vm = YSATradeCasVcmCellVM()
+        list.append(YYCellItem(id: YSATradeCasVcmCell.reuseIdentifier(), height: 32, model: vm, selectedBlock: nil))
+        
+        listData = [list]
+    }
+    
+    func refreshUI() {
+        makeDisplayItems()
+        tableVC?.refreshProcessUI(self)
+    }
+    
+    //MARK: Property
+    var shouldShowCasVcm: Bool = true
+    
+    var listData: [[YYCellItem]] = []
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7599B168-0217-41BA-8809-28EA67FCCDF9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@yfProcessor</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

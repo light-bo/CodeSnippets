@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfStructModel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct YSASpreadDetailModel {
+    init(_ param: [String: Any]) {
+        let json = JSON(param)
+        self.init(json: json)
+    }
+    
+    init(json: JSON) {
+        self.from = json["from"].doubleValue
+        self.to = json["to"].doubleValue
+        self.spread = json["spread"].doubleValue
+    }
+    
+    let from: Double
+    let to: Double
+    let spread: Double
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>84A882A6-0C59-4FAB-9C76-3FCBEEAEAFB5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@yfStructModel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

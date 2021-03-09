@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfProcessorVC</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class YSABrokerTradeOrderPositionController: YYTableViewProcessController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configTableView()
+        setupProcessor()
+        refreshUI()
+    }
+    
+    override func initailizeProcessors() -&gt; [YYTableViewProcessor] {
+        return displayProcessors
+    }
+    
+    func gesturesTableViewStyle() -&gt; UITableView.Style {
+        return UITableView.Style.plain
+    }
+    
+    func configTableView() {
+        theme.config(type: YSABrokerTradeOrderPositionController.self) { (vc, t) in
+            guard let theme = t as? YSABaseTheme else { return }
+            vc?.tableView.backgroundColor = theme.backgroundColor.colorBase0
+        }
+    }
+    
+    func setupProcessor() {
+        displayProcessors = [
+        
+        ]
+        
+        logicProcessors = [
+        
+        ]
+        
+        let allProcessors: [YYBaseVCProcessor] = displayProcessors + logicProcessors
+        
+        allProcessors.forEach { (p) in
+            p.bindViewController(self)
+            if p.responds(to: #selector(YFViewControllerActionObserver.onViewDidLoad(_:))) {
+                p.onViewDidLoad(self)
+            }
+        }
+    }
+    
+    //MARK: property
+    var displayProcessors: [YYTableViewProcessor] = []
+    var logicProcessors: [YYBaseVCProcessor] = []
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2FE0B61D-D8EB-4160-BB7C-7A44CF53489D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@yfProcessorVC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@yfRate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    var returnRateAttributeString: NSMutableAttributedString {
+        var attributeString: NSMutableAttributedString = NSMutableAttributedString(string: "")
+        
+        guard let fundInfoModel = fundModel else { return attributeString }
+        
+        let theme = YFThemeManager.current()
+        
+        let rateItem = fundInfoModel.oneYearReturn.signedFormatPercent()
+        
+        let sign = rateItem.0
+        
+        guard let value = rateItem.1, sign != .undefine else {
+            attributeString = kCommonPlaceholder.attribute.textColor(theme.textColor.colorText90).font(UIFont.systemFont(ofSize: 20, weight: .semibold))
+            return attributeString
+        }
+        
+        let color = (sign == .negative ? theme.chartColor.chartNegative : theme.chartColor.chartPositive)
+        attributeString = value.attribute.font(UIFont.systemFont(ofSize: 20, weight: .semibold)).textColor(color).range(sign.prefix).font(UIFont.systemFont(ofSize: 16, weight: .semibold))
+        
+        return attributeString
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EC3DB042-7E0F-4ED6-AD0D-861BF7CA9603</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@yfRate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -47,6 +47,10 @@ class YSAAddCollectedNewsRequest: YSAPlainRequest&lt;YSAAddCollectedNewsParam, Y
         
         return param
     }
+    
+    open override func shouldCacheResponse(_ respObj: YFResponseObj&lt;YSATradePriceSpreadDataResp&gt;) -&gt; Bool {
+        return true
+    }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>09795596-904E-4E7C-B880-A6098B9AB885</string>

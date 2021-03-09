@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@ysaOCModel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@objcMembers
+class YSABannerModel: NSObject {    
+    let title: String
+    let summary: String
+    let clickTarget: String
+    let imgUrl: String
+    let needLogin: Bool
+    
+    convenience init(_ param: [String: Any]) {
+        let json = JSON(param)
+        self.init(json: json)
+    }
+
+    init(json: JSON) {
+        self.title = json["title"].stringValue
+        self.summary = json["summary"].stringValue
+        self.clickTarget = json["clickTarget"].stringValue
+        self.imgUrl = json["imgUrl"].stringValue
+        self.needLogin = json["needLogin"].boolValue
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1223576D-DB6F-44F1-84FC-15AE306E2294</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@ysaOCModel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
